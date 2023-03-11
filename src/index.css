@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #eeee;
+}
+
+nav {
+  z-index: 999;
+}
+
+
+.element, .contacts, .services{
+  background-image: url('../src/Assets/Background/header.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.element{
+  background-image: url('../src/Assets/Background/house.jpg');
+}
+
+.card:hover{
+  transform: rotateY(15deg);
+}
+
+.title::after{
+  content: "";
+  background-color: yellowgreen;
+  display: block;
+  position: relative;
+  padding: 2px;
+  width: 10%;
+  margin: 1rem auto;
+}
+
+.swim:nth-of-type(4){
+  grid-column: span 2;
+}
+
+.swim:nth-of-type(5){
+  grid-column: span 2;
+}
+
+.petro:nth-of-type(7){
+  grid-column: span 2;
+}
+
+@media(max-width:600px){
+  .petro:nth-of-type(7){
+    grid-column: initial;
+  }
+  .petro:nth-of-type(6){
+    grid-column: span 2;
+  }
+}
+
+@media(max-width: 768px){
+  .swim:nth-of-type(4){
+    grid-column: initial
+  }
+  
+  .swim:nth-of-type(5){
+    grid-column: initial
+  }
+}
+
+.policy p {
+  margin: 1rem 0;
+}
+
+.policy h2 {
+  font-size: 24px;
+  color: #244886;
+  font-weight: 600;
+}
+
+.policy ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+  width: 75%;
+  margin: 0 auto 1rem;
+}
+
+.policy a {
+  color: #244886;
+}
+
+@media (max-width: 700px) {
+  .policy h2 {
+    font-size: 20px;
+  }
+
+  .policy ul {
+    width: 100%;
+  }
+
+  .policy li {
+    margin: 0 0 0 1rem;
+  }
+
+  .policy p,
+  .policy h2 {
+    padding: 0 1rem;
+  }
+
+  .policy h1 {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+
+.hero{
+  background-image: url('./Assets/Background/background.jpg');
+  animation: moves;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+
+@keyframes moves {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 70% 70%;
+  }
+
+  50% {
+    background-position: 70% 70%;
+  }
+
+  100%{
+    background-position: 0% 0%;
+  }
+}
